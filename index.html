@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geo Quiz - Natuurrampen in Japan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌋 Geo Quiz: Natuurrampen in Japan</h1>
+            <p class="subtitle">Test je kennis over vulkanen, aardbevingen en meer!</p>
+        </header>
+
+        <div class="game-menu">
+            <h1>Kies een spel</h1>
+            <div class="game-options">
+                <button onclick="startGame('memory')" class="game-option">
+                    <span class="emoji">🎴</span>
+                    <span class="game-title">Memory</span>
+                </button>
+                <button onclick="startGame('quiz')" class="game-option">
+                    <span class="emoji">❓</span>
+                    <span class="game-title">Quiz</span>
+                </button>
+                <button onclick="startGame('plates')" class="game-option">
+                    <span class="emoji">🌍</span>
+                    <span class="game-title">Platen Spel</span>
+                </button>
+                <button onclick="startGame('volcano')" class="game-option">
+                    <span class="emoji">🌋</span>
+                    <span class="game-title">Vulkaan Bouwer</span>
+                </button>
+                <button onclick="startGame('richter')" class="game-option">
+                    <span class="emoji">📊</span>
+                    <span class="game-title">Aardbevingsmeter</span>
+                </button>
+                <button onclick="startGame('forces')" class="game-option">
+                    <span class="emoji">⚡</span>
+                    <span class="game-title">Krachten Match</span>
+                </button>
+            </div>
+            <button onclick="resetProgress()" class="reset-button">Reset Voortgang</button>
+        </div>
+
+        <div id="game-container" class="hidden">
+            <div id="memory-container"></div>
+            <div id="quiz-container"></div>
+            <div id="plates-container"></div>
+            <div id="truefalse-container"></div>
+        </div>
+
+        <div id="score-container" class="hidden">
+            <h2>Quiz afgerond!</h2>
+            <p>Je hebt <span id="score">0/0</span> vragen goed!</p>
+            <button onclick="returnToMenu()">Terug naar menu</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
